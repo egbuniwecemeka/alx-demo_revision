@@ -7,14 +7,20 @@ void main ()
     int x = 5, y = 7;
 
     sum(&x, &y);
-    printf("%d %d", &x, &y);
+    printf("calling function\n")
+    printf("%d %d\n", x, y);
 }
 
-void sum(int *x, int *y)
+void sum(int *a, int *b)
 {
-    *x = 7;
-    *y = 5;
-    printf("%d %d", *x, *y);}
+    int sum = 0;
+    *a = 1, *b = 2;
+    sum = *a + *b
+    printf("called function\n")
+    printf("%d\n", sum);
+}
+//Output: value of calling function will be updated to value of called function.
+
 /* Call by Reference:
 In call by reference, a reference or memory address of the actual argument is passed to the function. This means that any changes made to the parameter inside the function are reflected in the original value outside the function.
 
