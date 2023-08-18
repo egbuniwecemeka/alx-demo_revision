@@ -1,6 +1,6 @@
 #include<stdio.h>
 //FUnction declaration with no return type/argument
-void sum(void);
+void sum();
 void mul(void);
 void divide(void);
 void subtract(void);
@@ -13,7 +13,7 @@ int main(void) {
 }
 
 //FUnction definitions with no return type/argument
-void sum()
+void sum(void)
 {
     int a = 5, b =10, sum = 0;
     sum = a + b;
