@@ -15,6 +15,6 @@ int sum()   //Function definition
     int a, b, sum = 0;
     a = 1;
     b = 2;
-    sum = a +  b;
+    sum = a + b;
     return (sum);
 }
