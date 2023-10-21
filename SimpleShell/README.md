@@ -20,4 +20,13 @@ What  is a process?
 A process is an instance of an executing program with an unique ID. ie a process is a progrm in execution
 
 what is pid_t??
-pid_t is a signed data type capable of representing a unique id
+pid_t is a signed integer type capable of representing a process id
+
+i. What is a parent process? 
+A parent process is a process that creates a child process
+
+PPID(Parent Process Identifier)
+Unique identifier of the parent process
+
+How to get ppid?
+getppid()
