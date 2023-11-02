@@ -9,16 +9,16 @@
  * Return: 
  */
 
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
-    __FILE__ *stream;
-    size_t *n;
-    char **lineptr;
+    FILE *stream;
+    size_t n = 0;
+    char *lineptr = NULL;
     ssize_t nread;
 
     if (argc == -2)
     {
-        fprintf("Usage of %s\n", argv[0]);
+        fprintf(stderr, "Usage of %s\n", argv[0]);
         exit(EXIT_FAILURE);
     }
 
