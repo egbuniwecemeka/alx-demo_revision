@@ -9,7 +9,7 @@ int main(int ac, char **av[])
     ssize_t *lread;
 
     lread = getline(&lineptr, &n, stdin);
-    printf("%sg\n", lread);
+    printf("%ln\n", lread);
 
     return (0);
 }
