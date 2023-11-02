@@ -6,10 +6,10 @@ int main(int ac, char **av[])
     char *prompt = "$ ";
     char *lineptr = NULL;
     size_t n = 0;
-    int lread;
+    char lread;
 
     lread = getline(&lineptr, &n, stdin);
-    printf("%s\n", lread);
+    printf("%sg\n", lread);
 
     return (0);
 }
