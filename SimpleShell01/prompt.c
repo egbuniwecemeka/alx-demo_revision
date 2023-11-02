@@ -8,7 +8,7 @@ int main(int ac, char **av[])
     size_t n = 0;
 
     getline(&lineptr, &n, stdin);
-    printf("%zd\n", lineptr);
+    printf("%s\n", lineptr);
 
     return (0);
 }
