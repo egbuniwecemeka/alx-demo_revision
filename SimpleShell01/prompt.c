@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-int main(int ac, char **av[])
+int main(void)
 {
     char *prompt = "$ ";
     char *lineptr = NULL;
     size_t n = 0;
 
-    fwrite(STDOUT_FILENO, prompt, 2);
+    write(STDOUT_FILENO, prompt, 2);
 
     getline(&lineptr, &n, stdin);
 
