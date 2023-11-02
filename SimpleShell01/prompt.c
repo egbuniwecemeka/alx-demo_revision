@@ -7,7 +7,7 @@ int main(int ac, char **av[])
     char *lineptr = NULL;
     size_t n = 0;
 
-    write(STDOUT_FILENO, prompt, 2);
+    fwrite(STDOUT_FILENO, prompt, 2);
 
     getline(&lineptr, &n, stdin);
 
