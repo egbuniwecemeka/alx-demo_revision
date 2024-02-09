@@ -89,7 +89,6 @@ Eg:
 from my_func.abs import my_abs (Absolute import)
 from abs import my_abs (Relative import)
 
-
 ## Unittest
 
 Important concepts include;
@@ -98,4 +97,81 @@ Important concepts include;
 2. Test case - condition to test for. A test for a required response to an input. Unittest may provide a base class __TestCase__ which may be used to test for new cases
 3. Test suite - A collection of test cases. It aggregates tests that should be executed together.s
 4. Test runner - orchestrates the execution of test cases and provides the outcome to the user. A graphical, textual or special cases may be used to display result of test.
-Note: The script Tools/unittestgui/unittestgui.py is apython source distribution GUI tool for easy use of test discovery and execution 
+Note: The script Tools/unittestgui/unittestgui.py is apython source distribution GUI tool for easy use of test discovery and execution
+
+## Command line Interface
+
+The unittest can be used from the command line to test for modules, classes or individual test methods
+python -m unittest test_module test_module1
+python -m unittest test_module.TestClass
+python -m unittest test_module.TestClass.test_method
+
+The unittest can speceified by path also:
+python -m unittest test_folder/test_module.py
+Note: Specified path must be importable as a module, specified path is converted to a path by removing '.py' and converting '/' seperators to '.'. Also, if a test file is not importable as a module, it must be run directly.
+Test are run with -v flag for higher verbosity
+python -m unittest -v test_module
+Use: python -m unittest -h
+
+## Command line options
+
+-b --buffer
+-c --catch(Control-C)Interupts test and gives report up to tested module. If done again, it raises the KeyboardInterrupt exception
+-f --failfast - Stops test run on first error or failure
+
+## Test Discovery
+
+Firstly, in order to be compatible with test discovery, all test files must be modules or packas
+Basic command line usuage:
+cd project_directory
+python -m unittest discover
+Note As a shortcut, python -m unittest is the equivalent of python -m unittest discover. If you want to pass arguments to test discovery the discover sub-command must be used explicitly.
+Below are discover sub-command options
+-v --verbose(Verbose output)
+-s --start-directory(Directory to begin test. Default is '.')
+-p --pattern(Pattern to match test files. Default is 'test*.py')
+-t --top-level-dirctory(top level directory of project)
+The -s, -p, -t flags can be passed in as positional arguments in that order.Eg below(From what i understand, they can be represented by what they represent)
+python -m unittest discover -s project_directory -p "*_test.py"
+python -m unittest discover project_directory "*_test.py"
+The above two lines are equivalent.
+
+## Organizing test code
+
+Test cases are the basic building blocks. In unittest, test cases are represented by unittest.TestCase instances. To create personal test cases, you must write TestCase or use FunctionTestCase.
+
+## AirBnB Project
+
+* Frontend(console cmd Module)
+* Backend(OOP)
+* Database(Storage)
+* Testing(unittest)
+
+Analysis->AirBnB
+User Account(Fields, unique_id, create_date)
+Review
+Place
+Amenity->classes(attributes and methods)
+CRUD.
+where: C - Create - To create user acct, review, Place, Amenity using classes(attr and methods)
+R - Read - To read stored data
+U - Udpate - To update stored data
+D - Delete - To delete stored data
+In the course of building the project, some unique attributes will be used all through the different classes also CRUD methods. As a result of the presence of attributes and meethods in each class, a genreal class can be created to be a backbone of all other classes to be created.
+
+**BaseClass** definition
+
+* define common attributes among all classes
+* define common methods among all classes
+When other classes are then created, they inherit from the BaseClass ie.
+
+**OtherClasses(BaseClass)** definition
+
+* inherits all BaseClass attribute
+* inherits all BaseClass methods
+* defines unique attributes to individual class
+* define unique method of the individual class
+
+After the above processes are done, the next step involves how we store our data,
+Note: Remember "Everything in Python is an OBJECT". Therefore, unless specified otherwise, we will be storing our data as an object. The drawback of this method is that object stored in a file as a string which is not advisable because of difficulty in usability.
+Beacause of this, object needs to be prepared for storage(Convert to JSON string and store as file)
