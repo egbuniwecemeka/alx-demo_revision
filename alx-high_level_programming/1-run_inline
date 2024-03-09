@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$PYCODE" ]; then
+    echo "Variable not set"
+    exit 1
+fi
+    
+python -c "$PYCODE"
