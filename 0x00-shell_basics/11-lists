@@ -1,0 +1,3 @@
+#!/bin/bash
+#  lists all files, hidden, parent dir & boot dir
+ls -la . .. /boot

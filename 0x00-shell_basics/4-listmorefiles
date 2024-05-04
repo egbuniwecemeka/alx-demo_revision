@@ -1,0 +1,3 @@
+#!/bin/bash
+# script current directory contents, including hidden files
+ls -la

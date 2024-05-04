@@ -1,0 +1,3 @@
+#!/bin/bash
+# script that changes current dir to user's home dir
+cd ~

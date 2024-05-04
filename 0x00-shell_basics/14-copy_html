@@ -1,0 +1,4 @@
+#!/bin/bash
+# copies all HTML files from current dir, to parent dir
+# copy only files that do not exist in parent dir or newer versions
+cp -u *.html .. 
