@@ -1,0 +1,3 @@
+#!/bin/bash
+# creates a symbolic link __ls__ to /bin/ls
+ln -T /bin/ls ls

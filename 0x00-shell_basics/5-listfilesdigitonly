@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+# displays files, hidden files in current dir in long format, with numerical ID
+ls -lna

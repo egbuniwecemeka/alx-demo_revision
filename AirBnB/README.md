@@ -144,7 +144,7 @@ Test cases are the basic building blocks. In unittest, test cases are represente
 
 * Frontend(console cmd Module)
 * Backend(OOP)
-* Database(Storage)
+* Database(File Storage)->(json module)
 * Testing(unittest)
 
 Analysis->AirBnB
@@ -174,4 +174,34 @@ When other classes are then created, they inherit from the BaseClass ie.
 
 After the above processes are done, the next step involves how we store our data,
 Note: Remember "Everything in Python is an OBJECT". Therefore, unless specified otherwise, we will be storing our data as an object. The drawback of this method is that object stored in a file as a string which is not advisable because of difficulty in usability.
-Beacause of this, object needs to be prepared for storage(Convert to JSON string and store as file)
+Beacause of this, object needs to be prepared for storage(Convert to JSON string and store as file prepare object for storage->JSON
+
+ADVANTAGEES OF STORING JSON OBJECTS AS JSON STRINGS
+
+1. With the help of a Json Module, JSON strings can be easily converted to JSON objects
+2. JSON data stored as JSON string can be used by any other programming language
+
+The process of converting python objects into JSON string, is called serialization. An additional advantage is, JSON strings are usable by other programming languages
+The reverse process of converting JSON string to python object is know as deserialization(This is not connected to ealier classes or BaseClass). It will have its own class eg FileStorageClass. Therefore, FIleStorageClass will contain attributes and methods used for both serialization and deserialization
+FileStorageClass: contains attributes and methods related to file  
+
+## Summary
+
+1. BaseModel - backbone of all other class
+2. FileStorageClass - handles storage aspect of the file(A major advantage of OOP is that it cn be sed to create reusable codes. Therefore anytime we want to store a file, d same class can be reused. Hence, the reason why d fileStorageClass is in a seperate class)
+Challenge: Linking BaseClass to FileStorageClass. Steps
+
+1.In BaseClass(Create a method eg save method) - saving an instance of a class(calls the fileStorageClass) so it saves whatever is passed to it. attributes are passed into method using "self". eg id, create_at, updated_at. time representation uses the "module datetime". In a nutshell, if the save method is called, it is expected to save an instance of these attributes, provided it is called by a class or subclass that inherits from the parent class.
+Example of previous explanations
+from filestorage import FileStorageClass
+class BaseClass():
+def save(self):(saving an instance of the class)
+id, create_at, update_at
+storage.save(self)
+
+A module - is a python script that can be imported and used by another script.
+A package - collection of modules in a given directory.(A package should contain the magic "__init___.py". Also, the magic file can contain functionality to run anytime a module is used). Therefore if fileStorageClass is instantiated in it, anytime the filstorage module is called, an instance is created for it, this means we have access to storage. Therefore, importing storage in another module makes its instance usable with other methods and attributes.
+
+__init___.py
+
+storage = FileStorageClass()

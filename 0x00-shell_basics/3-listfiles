@@ -1,0 +1,3 @@
+#!/bin/bash
+# script to list files in long format
+ls -l

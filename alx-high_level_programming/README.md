@@ -1,3 +1,1 @@
-# ALX HIGH LEVEL PROGRAMMING README
-
-
+# 0x12. JavaScript - Warm up
