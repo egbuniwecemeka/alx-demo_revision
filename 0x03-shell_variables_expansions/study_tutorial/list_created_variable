@@ -1,0 +1,3 @@
+#!/bin/bash
+# Usage: Variable name as first argument in CLI
+echo "$(set | grep -e "$1")"

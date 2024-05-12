@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "$#" != 0 ]
+then
+	echo "$1 is parmeter \$1"
+	echo "$2 is parmeter \$2"
+	echo "$3 is parmeter \$3"
+fi

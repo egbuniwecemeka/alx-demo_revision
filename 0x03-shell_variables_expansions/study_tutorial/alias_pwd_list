@@ -1,0 +1,3 @@
+#!/bin/bash
+# Can alteratively create 2 aliases instead of commands
+alias p=pwd; l=ls -al

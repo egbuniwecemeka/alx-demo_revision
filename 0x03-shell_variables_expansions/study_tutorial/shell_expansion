@@ -1,0 +1,20 @@
+#!/bin/bash
+# Pathname expansion
+echo *d
+echo d*
+echo [[:upper:]]*
+echo *[[:lower:]]
+echo /usr/*/share/
+# Tilde expansion
+echo ~root
+echo ~
+# Arithmetic expansion
+echo "The addition of 5 & 3 = $((5+3))"
+echo "The addition of 5 & 3 = $(($((5+3)) * 10))"
+echo "The remainder of 2 in 11 is $((11%2))"
+# Brace expansion
+echo Software-{Python,C,Devops}-Developer
+echo {1..10}
+echo {Z..A}
+echo a{A{1,2},B{3,4}}b
+mkdir {2020..2022}-{1..3}
