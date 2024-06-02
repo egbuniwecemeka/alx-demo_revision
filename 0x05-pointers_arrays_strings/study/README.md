@@ -38,3 +38,28 @@ Pointer arithmetic includes unary increment, decrement operations
 A string in C can be defined as a null-terminated sequence of char type values.
 
 Note the length of the string does not contain the null ( '\0' ) character. eg. using strlen() to check the length of a string/array.
+
+## Memory layout
+There are majorly 5 layers in C memory layout namely; stack, heap, block started by symbol, data segment, text segment
+
+Each layer has its own read, write and execute permisson
+
+If a program tries to access a memory it is not permitted to, a segmentation fault occurs
+
+* The stack stores local variables, function parameters and bookkeeping info related to function calls. It uses the LIFO.
+
+Note : A stack frame (activation frame/record) is created when a function is called and destroyed when it returns
+
+* The heap segment is allocate memory at run time. It allowa dynamic allocation and deallocation 
+Heap area is managed by mem management functions like malloc, calloc, free
+
+Heap area is shared by aall shared libraries & dynamically loaded modules
+
+## Uninitialized data segment block started by symbol (BSS)
+* Contains uninitialized global and etatic variables
+* program  loader allocates memory for the BSS section when program is loaded.
+
+## Text
+* Contains binary of compiled program
+* Read-only and cannot be modified
+* Sharable therefore only a single copy needs to be in memory
