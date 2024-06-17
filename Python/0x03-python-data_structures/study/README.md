@@ -10,6 +10,7 @@
 * list.append(x)
 * list.extend(iterable)
 * list.count(x)
+* list.copy()
 * list.remove(x)
 * list.pop([i])
 * list.insert(i, x)
