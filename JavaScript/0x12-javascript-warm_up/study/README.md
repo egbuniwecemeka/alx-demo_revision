@@ -85,4 +85,12 @@ Note: Accessor property defers from accessor method. Accessor proptery attribute
 * **JavaScript has a standard library of built in objects. Use them!**
 * **JavaScript is a weakly typed language. This means that there are usually type conversions**
 * Types of type coercion includes; primitive coercion,
-* objects are converted to primitive values by calling **[@@toPrimitive]
+* objects are converted to primitive values by calling **[@@toPrimitive()], valueof(), toString() methods, in that order**
+* Two types of numeric coercion are Number and BigInt
+* Numeric coercion is almost same with number coercion, except BigInts are returned instead of a TypeError
+* Numeric coercion is used by all arithmetic operators except *unary plus* which uses number coercion.
+* There are three distinct paths in which objects may be converted to primitives namely; 
+* primitive coercion, [@@toPrimitive]("default") → valueOf() → toString()
+* numeric, number, BigInt coercion [@@toPrimitive]("number") -> valueOf() -> toString()
+* String coercion [@@toPrimitive]("string") -> toString() -> toValue()
+* if present, [@@toPrimitive] must be callable and return a primitive. While valueOf and toString wll be ignored if not callable or return an object.
