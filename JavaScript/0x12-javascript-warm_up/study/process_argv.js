@@ -6,8 +6,8 @@
     The remaining elements are any command-line arguments  
 */
 
-const {argv} = process.argv;
+const {argv} = require('process');
 
-argv.forEach((index, value) => {
+argv.slice(2).forEach((index, value) => {
     console.log(`${index}: ${value}`)
 });
