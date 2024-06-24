@@ -95,8 +95,8 @@ Note: Accessor property defers from accessor method. Accessor proptery attribute
 * String coercion [@@toPrimitive]("string") -> toString() -> toValue()
 * if present, [@@toPrimitive] must be callable and return a primitive. While valueOf and toString wll be ignored if not callable or return an object.
 
-
 ## Functions
+
 * Some functions are not part of the built in functions but are defined as browsers APIs, to provide more functionalities.
 * Functions that are part of objects are called methods*
 * Three basic processes of functions are; function declaration, function definition and function call
@@ -106,6 +106,14 @@ Note: Accessor property defers from accessor method. Accessor proptery attribute
 * Default parameters can be supported with the use of '='
 
 ### Anonymous functions and arrow functions
+
 * Anonymous functions are functions without name
 * **They are often used when a functions expects or uses another function as parameter**
 * This form of functions are often know as function expression. Note such functions are not hoisted.
+
+### Functions scopes and conflicts
+
+* The top level outside every function is the **global scope**
+* Values defined in global scope are accesible from everywhere in your code
+* This is mainly due for security and organization purposes
+* This could be visualized to a zoo, where different animals are kept in their own cages(local habitat/**local scope**). While the zoo kepper(**global scope**) have the keys to access every cage, and carry out daily activites on these animals.
