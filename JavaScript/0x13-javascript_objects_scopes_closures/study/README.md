@@ -15,6 +15,26 @@ to as properties and methods.
 * Object members can be retrieved as well as being set (updated)
 * Aside updating object properties and methods, object properties and methods can be created
 * Bracket notation can be used to set not only members value dynamically, but also member names.
-* *this* refers to the current object the code being executed
+* ***this* refers to the current object the code being executed**
+* In the case of an object method, *this* refers to object the method is called on
+* This is useful in constructors by using single object definition to create more than one object
+* **Object literals are useful in creating single objects but not in creating multiple objects**. This will mean we have to create multiple objects which is not ideal. Hence the use of constructors.
+* **A *constructor* is a function containing the new keyword**
+* When a constructor is called, it **creates a new object, bind this to the object, run the code in the constructor, return the new object**
+* By convention constructors start with a capital letter
 
+## Classes in JavaScript
+
+Objective: understanding how to use the features provided by JavaScript to implement classical object-oriented programs
+
+* A class can be deeclared using the **class** keyword
+* constructor *keyword* creates a new object, bind this to the new object, runs the code in the constructor and returns the new object.
+* if the default constructor is omitted, a default constructor is generator.
+
+## Inheritance
+
+* The keyword **extends** is used to inherit from another class.
+* If a subclass has its own initialization, it must first call the superclass constructor 'super()' and pass parameters expected by the superclass.
+
+## Encapsulation
 
