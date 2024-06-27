@@ -1,5 +1,6 @@
 # JavaScript - Objects, Scopes and Closures
 
+* **module.exports** is used to export modules.
 * Objects are collections of related data and functionalities. They consist of variables and functions commonly referred 
 to as properties and methods.
 * Creating an object in JS requires firstly assigning it to a variable.
