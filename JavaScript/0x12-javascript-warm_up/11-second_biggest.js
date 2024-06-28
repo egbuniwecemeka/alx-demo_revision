@@ -1,17 +1,13 @@
 #!/usr/bin/node
 
-const {argv} = require('node:process');
+const {argv} = require('node:process')
 
-const len = argv.length
+const len = argv.length - 2;
 
-const first = 0;
-
-const second = 0;
-
-if (isNaN(argv[2]) || len < 1){
+if (len <= 1){
 	console.log(0);
-}
-
-for (i = 0; i < len; i++){
-	if ();
+}else{
+	const arr = argv.slice(2).map(Number);
+	const second = arr.sort(function (a, b) {return b - a})[1];
+	console.log(second);
 }
