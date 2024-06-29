@@ -117,3 +117,7 @@ Note: Accessor property defers from accessor method. Accessor proptery attribute
 * Values defined in global scope are accesible from everywhere in your code
 * This is mainly due for security and organization purposes
 * This could be visualized to a zoo, where different animals are kept in their own cages(local habitat/**local scope**). While the zoo kepper(**global scope**) have the keys to access every cage, and carry out daily activites on these animals.
+
+### Simple Intro to NodeJS Module Scope
+
+* variable declared without a **let, const, var** are bound to the global object (Although this is not generally recommended)
