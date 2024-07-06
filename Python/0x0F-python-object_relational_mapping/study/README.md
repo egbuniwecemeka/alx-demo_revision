@@ -49,4 +49,25 @@ To install MySQLdb, MySQL needs to be installed.
 ## Execptions and Errors
 
 * 'module.Error' is a top level package used by DB to catch all database exceptions. In MySQL, it is MYSQLdb.Error
-* Every DB statement executed, has a potential to raise an error. Therefore, anytime a database query is executed, it should be 
+* Every DB statement executed, has a potential to raise an error. Therefore, anytime a database query is executed, it should be surronded by a **try/except block**. This includes connection, cursor request and statement execution.
+
+## Clean Up
+
+* This involves closing all open cursors and closing all open database connections.
+* Each cursor and database has a close function/method 'close()'
+
+## SQL Injection
+
+* SQL injection is when an attacker incorporates malicious input into an SQL query thereby leading to unintended and harmful consequences.
+* The root cause of SQL in most cases are poor input validation,
+* incorrect constructed SQL statement. (This is based on the fact that SQL statements consist of both data used by SQL statement and command control how the SQL statement is executed). SQL injection occurs when specially crafted user input is crafted that makes an application exit a data context and enter a command context. This allows the attacker alter the structure of SQL statement executed.
+
+## SQLAlchemy
+
+* A class using **Declarative** at least must have a **__tablename__** and a **Column** which is part of a primry key.
+* SQLAlchemy does not make assumptions about the table in which the class refers too.
+* SQLAlchemy has no built-in convention for names, data types or constraints.
+* After class construction, Declarative replaces all Column objects with Python accessors (**descriptors**). This process is known as **instrumentation**
+* The instrumented mapped classes provides a mans to access our table in a SQL context. It also loades the values of colums from the database.
+* The object used by SQLAlchemy to represent a **table metadata** is a **Table object**, which has been made by **Declarative**
+* **__table__** attribute can be used to inspect any Declarative class/object. eg **'Class.__table__'**

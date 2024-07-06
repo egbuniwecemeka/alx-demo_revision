@@ -41,3 +41,9 @@ for row in rows:
 # Fetch one-at-a-time
 cur.execute("SELECT * FROM song WHERE id = 1")
 print("Id: %s - Value %s" % cur.fetchone())
+
+
+# Cleaning up with 'close()'
+# Close all open cursors and database connections
+cur.close()
+db.close()
