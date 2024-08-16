@@ -15,4 +15,6 @@ Fields are of two types namely;
 
 The self variable refers to the object itself
 
-## 
+## __init__ method
+This method is run as soon as the object of a class is instantiated
+* __init__ method is useful for initialization (passing initial values to objects)
