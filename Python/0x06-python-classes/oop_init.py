@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """ A python script that shows how __init__ initializies values to objects"""
 
 class Staff:
