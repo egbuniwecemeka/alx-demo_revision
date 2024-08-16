@@ -13,5 +13,5 @@ class Staff:
 
 if __name__ == "__main__":
     """ Executes when run only as main script """
-    staff = Staff()
+    staff = Staff("Basil")
     staff.greet_staff()
