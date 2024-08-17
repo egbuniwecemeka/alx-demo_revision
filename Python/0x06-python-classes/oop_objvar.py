@@ -4,11 +4,12 @@
 class Robot:
     """ A Robot Model """
 
-    # Robot number
+    # Robot number (class variable)
     total_robots = 0
 
     def __init__(self, name):
         """ Initializes Robot class """
+        # name is an object variable because it is assigned using self
         self.name = name
         print(f"Initializing {self.name}")
 
@@ -52,5 +53,6 @@ Robot.robot_count()
 r2.kill()
 Robot.robot_count()
 
+print(Robot.__doc__)
 
 
