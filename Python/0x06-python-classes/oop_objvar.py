@@ -28,7 +28,7 @@ class Robot:
         Robot.total_robots -= 1
         
         if Robot.total_robots == 0:
-            print(f"{self.name} is no more. Sad :-(")
+            print(f"{self.name} was the last robot. Sad :-(")
         else:
             print(f"There are {Robot.total_robots} left!")
         
