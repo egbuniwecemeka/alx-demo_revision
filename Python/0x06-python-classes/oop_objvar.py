@@ -55,4 +55,5 @@ Robot.robot_count()
 
 print(Robot.__doc__)
 
-
+print(r1.__dict__)
+print(r2.__dict__)
