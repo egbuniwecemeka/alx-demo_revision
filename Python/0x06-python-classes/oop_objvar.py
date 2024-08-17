@@ -10,7 +10,7 @@ class Robot:
     def __init__(self, name):
         """ Initializes Robot class """
         self.name = name
-        print(f"Initialize to {self.name}")
+        print(f"Initializing {self.name}")
 
         # When robot is created, it is added to the total
         Robot.total_robots += 1
@@ -48,6 +48,8 @@ Robot.robot_count()
 print(f"After X years of service, its time for refresh")
 
 r1.kill()
+Robot.robot_count()
+r2.kill()
 Robot.robot_count()
 
 
