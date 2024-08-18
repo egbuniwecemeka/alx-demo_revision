@@ -63,7 +63,7 @@ if __name__ == "__main__":
     """ Execute as main program """
     x = Robot("Emeka", 2024)
     x.say_hi()
-    x.set_prod_year(2025)
+    x.set_name("Junior")
     x.say_hi()
 
 
