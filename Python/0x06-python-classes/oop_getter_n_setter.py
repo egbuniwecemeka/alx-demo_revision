@@ -26,7 +26,7 @@ class Robot:
         if self.year:
             print(f"{self.name} was created in {self.year}")
         else:
-            print("I do not know when I was created")
+            print(f"{self.name} do not know when I was created")
 
 
     def set_name(self, name):
@@ -53,7 +53,7 @@ class Robot:
         """
         self.prod_year = prod_year
 
-    
+
     def get_prod_year(self):
         """ Retrieves the robot's production year"""
         return self.prod_year
@@ -62,9 +62,11 @@ class Robot:
 if __name__ == "__main__":
     """ Execute as main program """
     x = Robot("Emeka", 2024)
-    
-    y = Robot()
-
-    y.set_name("Marvin")
     x.say_hi()
+    x.set_prod_year(2025)
+    x.say_hi()
+
+
+    y = Robot()
+    y.set_name("Marvin")
     y.say_hi()
