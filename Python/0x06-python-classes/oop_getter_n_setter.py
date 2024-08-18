@@ -15,13 +15,20 @@ class Robot:
         self.name = name
         self.year = year
 
+
     def say_hi(self):
         """ Format initialized output """
-        if self.name and self.year:
-            print(f"Hello, I am {self.name} and was created in {self.year}")
+        if self.name:
+            print(f"Hello, I am {self.name}")
         else:
             print("I have not been named yet, and was created in XXX")
-    
+        
+        if self.year:
+            print(f"{self.name} was created in {self.year}")
+        else:
+            print("I do not know when I was created")
+
+
     def set_name(self, name):
         """
         Setter method to update the robot's name
@@ -30,11 +37,13 @@ class Robot:
             name (str): name to be assigned to robot
         """
         self.name = name
-    
+
+
     def get_name(self):
         """ Retrieves the robot's name """
         return self.name
-    
+
+
     def set_prod_year(self, prod_year):
         """
         Setter method to update robots production year
@@ -43,6 +52,7 @@ class Robot:
             prod_year (int): Sets the robot production year
         """
         self.prod_year = prod_year
+
     
     def get_prod_year(self):
         """ Retrieves the robot's production year"""
