@@ -51,7 +51,7 @@ class Robot:
         Args:
             prod_year (int): Sets the robot production year
         """
-        self.prod_year = prod_year
+        self.year = prod_year
 
 
     def get_prod_year(self):
