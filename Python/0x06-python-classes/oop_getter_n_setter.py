@@ -70,4 +70,5 @@ if __name__ == "__main__":
 
     y = Robot()
     y.set_name("Marvin")
+    y.set_prod_year(2026)
     y.say_hi()
