@@ -4,7 +4,7 @@
 class Robot:
     """ A Robot class"""
 
-    def __init__(self, name):
+    def __init__(self, name=None):
         """
         Initiializing instance attributes
 
