@@ -24,7 +24,7 @@ class Robot:
             print("I have not been named yet, and was created in XXX")
         
         if self.year:
-            print(f"{self.name} was created in {self.year}")
+            print(f"{self.name} was created in {str(self.year)}")
         else:
             print(f"{self.name} do not know when I was created")
 
@@ -74,3 +74,14 @@ if __name__ == "__main__":
     # Format to see getter value
     print(y.get_prod_year())
     y.say_hi()
+
+""" 
+This module does not fully complie with the Zen of Python which says that
+
+    "There should be one and preferably only one obvious way to do it"
+
+    Robot class provides two ways to access or change "name' and "year" attributes
+    This will be prevented in later modules by the use of private attributes
+
+    Watch Out!!!
+"""
