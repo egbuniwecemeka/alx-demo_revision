@@ -56,7 +56,7 @@ class Robot:
 
     def get_prod_year(self):
         """ Retrieves the robot's production year"""
-        return self.prod_year
+        return self.year
     
 
 if __name__ == "__main__":
