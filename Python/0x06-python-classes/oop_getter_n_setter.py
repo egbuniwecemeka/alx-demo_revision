@@ -64,6 +64,7 @@ if __name__ == "__main__":
     x = Robot("Emeka", 2024)
     x.say_hi()
     x.set_name("Junior")
+    x.set_prod_year(2025)
     x.say_hi()
 
 
