@@ -15,7 +15,10 @@ class Robot:
     
     def say_hi(self):
         """ Prints initialized output"""
-        print(f"Hello, I am {self.name}")
+        if self.name:
+            print(f"Hello, I am {self.name}")
+        else:
+            print("There are 0 robots!")
     
     def set_name(self, name):
         """ Setter method to set value """
@@ -23,7 +26,7 @@ class Robot:
     
     def get_name(self):
         """ Getter method to retrieve value """
-        print(f"Retireved attribute: {self.name}")
+        return self.name
 
 if __name__ == "__main__":
     """ Execute as main program """
