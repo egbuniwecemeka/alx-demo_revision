@@ -33,6 +33,7 @@ if __name__ == "__main__":
         p = Player("Emeka", 59)
         p_str = str(p)
         print(p_str)
-        print("Type of string:", type(p_str))
+        print("Type of p_str:", type(p_str))
         new = eval(p_str)
+        print(new)
         print("Type of new:", type(new))
