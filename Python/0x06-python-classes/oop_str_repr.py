@@ -30,7 +30,7 @@ class Staff:
         return "Staff('" + self.name + "', " + str(self.year) + ")"
     
 if __name__ == "__main__":
-    s = Staff()
+    s = Staff("Emeka", 59)
     s_str = str(s)
     print(s_str)
     print("The type of s_str:", type(s_str))
