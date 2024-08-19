@@ -27,7 +27,7 @@ class Player:
         self.year = year
 
     def __repr__(self):
-        return "Robot('" + self.name + "', " + self.year +")"
+        return "Robot('" + self.name + "', " + str(self.year) +")"
     
 if __name__ == "__main__":
         p = Player("Emeka", 59)
