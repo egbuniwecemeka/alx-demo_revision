@@ -14,7 +14,7 @@ print(repr(x))
 
 class Player:
     def __repr__(self) -> int:
-        return "42"
+        return 42
 
 p = Player()
 print(repr(p))
