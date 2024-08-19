@@ -13,7 +13,7 @@ print(str(x))
 print(repr(x))
 
 class Player:
-    def __repr__(self):
+    def __repr__(self) -> int:
         return "42"
 
 p = Player()
