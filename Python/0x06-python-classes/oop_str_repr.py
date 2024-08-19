@@ -21,19 +21,19 @@ print(repr(car))
 print(str(x))
 print(repr(x)) """
 
-class Player:
+class Staff:
     def __init__(self, name, year):
         self.name = name
         self.year = year
-
+    
     def __repr__(self):
-        return "Player('" + self.name + "', " + str(self.year) + ")"
+        return "Staff('" + self.name + "', " + str(self.year) + ")"
     
 if __name__ == "__main__":
-        p = Player("Emeka", 59)
-        p_str = str(p)
-        print(p_str)
-        print("Type of p_str:", type(p_str))
-        new = eval(p_str)
-        print(new)
-        print("Type of new:", type(new))
+    s = Staff()
+    s_str = str(s)
+    print(s_str)
+    print("The type of s_str:", type(s_str))
+    new = eval(s_str)
+    print(new)
+    print("Type of new:", type(new))
