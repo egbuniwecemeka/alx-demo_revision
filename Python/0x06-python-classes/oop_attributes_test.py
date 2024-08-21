@@ -14,4 +14,5 @@ if __name__ == "__main__":
 
     print(attr_type.public)
     print(attr_type._protected)
+    # Private attribute inaccessible from outside class
     print(attr_type.__private)
